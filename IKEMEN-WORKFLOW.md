@@ -15,7 +15,7 @@ Ikemen GO is our active game engine, replacing the Martin browser-template setup
 
 Martin sprite slots, pose IDs, canvas dimensions and combat timings are archived reference, not requirements for new characters. Preserve earlier artwork for review and reuse where suitable.
 
-The existing Game Template ZIP exporter targets the older browser game and is not Ikemen-compatible. An Ikemen exporter still needs implementation. Until then, export approved individual images and animation masters for character packaging. Copying PNGs into chars alone does not create a playable fighter.
+The existing Game Template ZIP exporter targets the older browser game and is not Ikemen-compatible. A first command-line exporter is available in tools/export-ikemen.py. Export approved individual images and animation masters from Studio, then follow IKEMEN-CHARACTER-TEST.md. An in-app Studio export button remains pending. Copying PNGs into chars alone does not create a playable fighter.
 
 Use our in-house tools for reference artwork, asset preparation, scripting and integration. The transcript's video-generation service is optional; no dependency on it is required by this workflow.
 
@@ -23,10 +23,10 @@ Use our in-house tools for reference artwork, asset preparation, scripting and i
 
 This fork contains Ikemen GO engine source. Follow BUILDING.md for source builds. Official playable releases are at https://github.com/ikemen-engine/Ikemen-GO/releases. Keep a playable runtime separate from engine source, and record the version used for testing.
 
-Our local development workspace has the official v1.0.0 Windows runtime in runtime/ikemen, upstream source in reference/Ikemen-GO, and Play Ikemen.cmd. Runtime startup with default fighters has been verified. Those local tools and artwork are not automatically included in this fork. Custom character integration remains pending. The develop source checkout is not assumed to match the stable runtime binary.
+Our local development workspace has the official v1.0.0 Windows runtime in runtime/ikemen, upstream source in reference/Ikemen-GO, and Play Ikemen.cmd. Runtime startup with default fighters has been verified. Those local tools and artwork are not automatically included in this fork. The MVB Prototype character now loads with custom stance artwork and a working jab; the combat test confirmed 585 damage in a 20-second round. The develop source checkout is not assumed to match the stable runtime binary.
 
 ## First milestone
 
-Build one original character with a neutral stance and one basic attack, package it and verify it in Ikemen before expanding the move set. Preserve the bundled Kung Fu Man examples as technical references.
+The first character import milestone is verified locally: custom stance, jab contact, damage and recovery. See IKEMEN-CHARACTER-TEST.md. Full animation sequences, additional moves, balance and Studio UI integration remain future work. Preserve the bundled Kung Fu Man examples as technical references.
 
 Retain upstream license notices. Engine source is MIT licensed; bundled artwork, sounds and screenpack content have separate licenses.
